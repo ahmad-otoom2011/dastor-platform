@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة دستور — منصة تعليمية تُبني عليها المستقبل</title>
+  <meta name="description" content="منصة دستور التعليمية: اختبارات حسب المستوى، نتائج فورية، وتحليلات بيانية دقيقة لطلاب الصفوف الأولى حتى العاشر." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- ================= Navbar ================= -->
+  <header class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="منصة دستور">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="48" y2="48">
+              <stop stop-color="#4C6EF5"/><stop offset="1" stop-color="#3B5BDB"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg1)"/>
+          <path d="M11 31.5c4.6-2.4 9.4-2.4 13 0v6.2c-3.6-2.4-8.4-2.4-13 0v-6.2Z" fill="#fff" opacity=".95"/>
+          <path d="M24 31.5c4.6-2.4 9.4-2.4 13 0v6.2c-3.6-2.4-8.4-2.4-13 0v-6.2Z" fill="#fff" opacity=".75"/>
+          <path d="M24 9.5 12.5 15.4 24 21.3l11.5-5.9L24 9.5Z" fill="#FFD98E"/>
+          <path d="M33 17.6v6.6c0 1.9-4 3.4-9 3.4s-9-1.5-9-3.4v-6.6" stroke="#FFD98E" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+          <path d="M36.6 16.2v7.6" stroke="#FFD98E" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="36.6" cy="25.6" r="1.7" fill="#FFD98E"/>
+        </svg>
+        <span class="logo-text">د<b>ستور</b></span>
+      </a>
+
+      <nav class="nav-links" id="navMenu" aria-label="القائمة الرئيسية">
+        <a href="#home">الرئيسية</a>
+        <a href="#features">المميزات</a>
+        <a href="#levels">المستويات</a>
+        <a href="#stats">الإحصائيات</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/login" class="btn btn-ghost btn-sm">تسجيل الدخول</a>
+        <a href="/register" class="btn btn-primary btn-sm">إنشاء حساب</a>
+        <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="hero-badge"><span class="dot"></span> منصة معتمدة لقياس التحصيل الدراسي</span>
+        <h1>منصة تعليمية <span class="accent">تُبني عليها المستقبل</span></h1>
+        <p class="lead">
+          اختبارات مصمّمة حسب كل مستوى دراسي، نتائج فورية، وتحليلات بيانية توضّح طريق التقدّم —
+          من الصف الأول حتى الصف العاشر، بتجربة عربية سلسة وممتعة.
+        </p>
+        <div class="hero-cta">
+          <a href="/register" class="btn btn-primary">ابدأ مجاناً</a>
+          <a href="#features" class="btn btn-outline">اكتشف المزيد</a>
+        </div>
+        <ul class="hero-points">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            بدون رسوم اشتراك
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            نتائج لحظية بعد التسليم
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            محتوى يغطي 6 مستويات دراسية
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <!-- رسم احترافي: معلّم يشرح أمام طلابه -->
+        <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="hbg" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#EDF2FF"/><stop offset=".55" stop-color="#F7F9FF"/><stop offset="1" stop-color="#FFF6E4"/>
+            </linearGradient>
+            <linearGradient id="hboard" x1="0" y1="0" x2="0" y2="1">
+              <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F2F5FF"/>
+            </linearGradient>
+            <linearGradient id="hshirt" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#4C6EF5"/><stop offset="1" stop-color="#3B5BDB"/>
+            </linearGradient>
+            <linearGradient id="hbar1" x1="0" y1="1" x2="0" y2="0">
+              <stop stop-color="#4C6EF5"/><stop offset="1" stop-color="#74A0FF"/>
+            </linearGradient>
+            <clipPath id="hclip"><rect x="20" y="20" width="600" height="440" rx="34"/></clipPath>
+          </defs>
+
+          <g clip-path="url(#hclip)">
+            <rect x="20" y="20" width="600" height="440" rx="34" fill="url(#hbg)"/>
+            <circle cx="90" cy="90" r="60" fill="#DCE5FF" opacity=".7"/>
+            <circle cx="565" cy="405" r="85" fill="#FDEBC8" opacity=".65"/>
+            <circle cx="585" cy="70" r="26" fill="#FFE3B0"/>
+
+            <!-- عناصر تعليمية عائمة -->
+            <g opacity=".95">
+              <rect x="72" y="150" width="52" height="52" rx="14" fill="#FFFFFF" stroke="#D7E0FF" stroke-width="2"/>
+              <path d="M84 176h28M84 184h20" stroke="#4C6EF5" stroke-width="3.4" stroke-linecap="round"/>
+              <path d="M88 166h10" stroke="#F59E0B" stroke-width="3.4" stroke-linecap="round"/>
+            </g>
+            <g>
+              <rect x="546" y="150" width="46" height="46" rx="13" fill="#FFFFFF" stroke="#DCEFE6" stroke-width="2"/>
+              <path d="M557 173l6 6 12-13" stroke="#10B981" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </g>
+            <g>
+              <path d="M118 74l14 7.5L146 74v16.5c0 4.6-6.6 8.2-14 8.2s-14-3.6-14-8.2V74Z" fill="#F59E0B" opacity=".9"/>
+              <path d="M132 74V62" stroke="#B45309" stroke-width="2.6" stroke-linecap="round"/>
+              <circle cx="132" cy="58" r="3.4" fill="#B45309"/>
+            </g>
+
+            <!-- اللوحة -->
+            <g>
+              <rect x="276" y="56" width="330" height="212" rx="18" fill="url(#hboard)" stroke="#D7E0FF" stroke-width="3"/>
+              <rect x="276" y="56" width="330" height="34" rx="17" fill="#EDF2FF"/>
+              <circle cx="296" cy="73" r="5" fill="#EF4444" opacity=".75"/>
+              <circle cx="312" cy="73" r="5" fill="#F59E0B" opacity=".85"/>
+              <circle cx="328" cy="73" r="5" fill="#10B981" opacity=".85"/>
+              <text x="560" y="79" font-family="Tajawal, Arial" font-size="15" font-weight="700" fill="#3B5BDB" text-anchor="end">دستور</text>
+
+              <!-- أعمدة بيانية -->
+              <rect x="470" y="196" width="26" height="48" rx="7" fill="url(#hbar1)"/>
+              <rect x="506" y="168" width="26" height="76" rx="7" fill="url(#hbar1)" opacity=".8"/>
+              <rect x="542" y="140" width="26" height="104" rx="7" fill="#F59E0B"/>
+              <!-- منحنى تقدّم -->
+              <path d="M304 226c26-6 44-34 70-46s44 6 66-22" stroke="#10B981" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <circle cx="304" cy="226" r="5.5" fill="#10B981"/>
+              <circle cx="374" cy="180" r="5.5" fill="#10B981"/>
+              <circle cx="440" cy="158" r="5.5" fill="#10B981"/>
+              <!-- سطور كتابة -->
+              <path d="M304 110h96M304 128h70M304 146h84" stroke="#B7C6FF" stroke-width="6" stroke-linecap="round"/>
+              <!-- علامة A+ -->
+              <g transform="translate(466 104)">
+                <rect x="0" y="0" width="62" height="34" rx="10" fill="#ECFDF5"/>
+                <text x="31" y="23" text-anchor="middle" font-family="Tajawal, Arial" font-size="17" font-weight="800" fill="#10B981">+A</text>
+              </g>
+            </g>
+
+            <!-- المعلّم -->
+            <g>
+              <!-- ظل -->
+              <ellipse cx="205" cy="418" rx="70" ry="14" fill="#C9D4F2" opacity=".55"/>
+              <!-- الساقان -->
+              <path d="M186 340l-8 74M224 340l8 74" stroke="#1F2937" stroke-width="17" stroke-linecap="round"/>
+              <path d="M172 416h26M224 416h26" stroke="#3B5BDB" stroke-width="12" stroke-linecap="round"/>
+              <!-- الجسد -->
+              <path d="M205 246c30 0 50 22 52 50l4 50c1 12-9 22-22 22H171c-13 0-23-10-22-22l4-50c2-28 22-50 52-50Z" fill="url(#hshirt)"/>
+              <!-- ياقة -->
+              <path d="M189 250l16 20 16-20" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- الذراع الممدودة نحو اللوحة -->
+              <path d="M250 274c22-6 44-24 58-44" stroke="#4C6EF5" stroke-width="17" stroke-linecap="round" fill="none"/>
+              <circle cx="312" cy="226" r="10" fill="#F7C99D"/>
+              <!-- مؤشر -->
+              <path d="M316 222l58-34" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+              <!-- الذراع الأخرى -->
+              <path d="M160 280c-10 14-12 34-8 50" stroke="#4C6EF5" stroke-width="17" stroke-linecap="round" fill="none"/>
+              <circle cx="154" cy="336" r="10" fill="#F7C99D"/>
+              <!-- الرأس -->
+              <circle cx="205" cy="212" r="30" fill="#F7C99D"/>
+              <path d="M175 206c0-20 14-34 30-34s30 14 30 34c0-9-10-14-30-14s-30 5-30 14Z" fill="#1F2937"/>
+              <circle cx="195" cy="214" r="3.2" fill="#1F2937"/>
+              <circle cx="216" cy="214" r="3.2" fill="#1F2937"/>
+              <path d="M198 228c5 4 11 4 15 0" stroke="#C2410C" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+              <!-- قبعة تخرّج صغيرة -->
+              <path d="M244 174l18-9 18 9-18 9-18-9Z" fill="#1F2937"/>
+              <path d="M256 184v8c0 3 5 5 10 5s10-2 10-5v-8" stroke="#1F2937" stroke-width="2.6" fill="none"/>
+            </g>
+
+            <!-- الطلاب (من الخلف) -->
+            <g>
+              <!-- طالب 1 -->
+              <ellipse cx="120" cy="432" rx="54" ry="12" fill="#C9D4F2" opacity=".5"/>
+              <path d="M96 372c0-16 11-27 24-27s24 11 24 27v52H96v-52Z" fill="#10B981"/>
+              <circle cx="120" cy="332" r="24" fill="#F7C99D"/>
+              <path d="M96 328c0-16 11-26 24-26s24 10 24 26c0-7-10-11-24-11s-24 4-24 11Z" fill="#3E2A1E"/>
+              <!-- طالب 2 -->
+              <ellipse cx="330" cy="440" rx="56" ry="12" fill="#C9D4F2" opacity=".5"/>
+              <path d="M304 378c0-17 12-28 26-28s26 11 26 28v56H304v-56Z" fill="#F59E0B"/>
+              <circle cx="330" cy="336" r="25" fill="#F7C99D"/>
+              <path d="M305 332c0-16 11-27 25-27s25 11 25 27c0-8-11-12-25-12s-25 4-25 12Z" fill="#1F2937"/>
+              <!-- طالبة 3 -->
+              <ellipse cx="474" cy="434" rx="54" ry="12" fill="#C9D4F2" opacity=".5"/>
+              <path d="M450 376c0-16 11-27 24-27s24 11 24 27v54h-48v-54Z" fill="#845EF7"/>
+              <circle cx="474" cy="336" r="24" fill="#F7C99D"/>
+              <path d="M450 336c0-18 11-30 24-30s24 12 24 30c0-10-4-24-24-24-13 0-18 14-24 24Z" fill="#4A2C1A"/>
+              <path d="M450 336c-6 10-6 26-2 36" stroke="#4A2C1A" stroke-width="9" stroke-linecap="round" fill="none"/>
+            </g>
+
+            <!-- المكتب -->
+            <g>
+              <rect x="72" y="424" width="500" height="34" rx="14" fill="#E3E9F8"/>
+              <rect x="72" y="424" width="500" height="12" rx="6" fill="#CFD9F2"/>
+            </g>
+          </g>
+          <rect x="20" y="20" width="600" height="440" rx="34" fill="none" stroke="#E3E9F8" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= شريط إحصائيات حي ================= -->
+  <section class="stats-strip" aria-label="إحصائيات المنصة">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-num" id="statStudents" data-value="0">0</span>
+          <span class="stat-label">طالب مسجّل</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="statQuizzes" data-value="0">0</span>
+          <span class="stat-label">اختبار متاح</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="statResults" data-value="0">0</span>
+          <span class="stat-label">نتيجة مسجّلة</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="statAverage" data-value="0" data-suffix="٪">0</span>
+          <span class="stat-label">متوسط التحصيل</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= المميزات ================= -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">لماذا دستور؟</span>
+        <h2>كل ما تحتاجه لقياس التقدّم فعلاً</h2>
+        <p>صُمّمت المنصة لتكون أداة قياس دقيقة وممتعة في آنٍ واحد — للطالب والمعلّم معاً.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <h3>اختبارات حسب المستوى</h3>
+          <p>محتوى مقسّم على ست مجموعات دراسية من الصف الأول حتى العاشر، لكل مرحلة أسئلة تُناسب عمرها ومنهجها.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
+          </div>
+          <h3>نتائج فورية</h3>
+          <p>بعد إرسال إجاباتك تحصل على نتيجتك مباشرة مع نسبة النجاح ورسالة تحفيزية توضّح مستوى أدائك.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6" rx="1"/><rect x="12.5" y="7" width="3" height="10" rx="1"/><rect x="18" y="13" width="3" height="4" rx="1"/></svg>
+          </div>
+          <h3>تحليلات بيانية</h3>
+          <p>رسوم بيانية تفاعلية تُظهر أداءك عبر الاختبارات وتوزيع درجاتك لتعرف نقاط القوة والضعف بوضوح.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg>
+          </div>
+          <h3>لوحة تحكم شاملة</h3>
+          <p>كل اختباراتك ونتائجك ونسب تقدّمك في مكان واحد، مرتّبة وواضحة تُتاح من أي جهاز في أي وقت.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></svg>
+          </div>
+          <h3>دعم مباشر</h3>
+          <p>فريق المنصة يردّ على استفساراتك عبر نموذج التواصل، وتصلك الإجابة داخل حسابك بسرعة.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.2 14-1.7 7 5.5-3 5.5 3-1.7-7"/></svg>
+          </div>
+          <h3>محتوى معتمد</h3>
+          <p>أسئلة مراجَعة ومبنية على متطلبات المناهج، تُحدَّث باستمرار لضمان دقة القياس وموثوقية النتائج.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= المستويات الدراسية ================= -->
+  <section class="levels" id="levels">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">المستويات الدراسية</span>
+        <h2>اختر صفّك وابدأ الاختبار</h2>
+        <p>ست مجموعات دراسية مصمّمة حسب المرحلة العمرية والمنهجية لكل طالب.</p>
+      </div>
+
+      <div class="levels-grid">
+        <article class="level-card reveal" data-group="1-2">
+          <div class="level-top">
+            <span class="level-badge">6 – 8 سنوات</span>
+            <svg class="level-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34c5-3 11-3 16 0 5-3 11-3 16 0V12c-5-3-11-3-16 0-5-3-11-3-16 0v22Z"/><path d="M24 12v22"/></svg>
+          </div>
+          <h3>الصف الأول والثاني</h3>
+          <p>بداية رحلة التعلّم: مهارات القراءة والحساب والعلوم بأسلوب ممتع وأسئلة قصيرة تناسب عمر 6 – 8 سنوات.</p>
+          <a href="/register" class="btn btn-primary btn-sm">ابدأ الاختبار</a>
+        </article>
+
+        <article class="level-card reveal" data-group="3-4">
+          <div class="level-top">
+            <span class="level-badge">8 – 10 سنوات</span>
+            <svg class="level-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="8"/><path d="M16 24l6 6 12-13"/></svg>
+          </div>
+          <h3>الصف الثالث والرابع</h3>
+          <p>تعميق الفهم في الرياضيات والعلوم مع مسائل تحدّيية ممتعة تُهيّئك للانتقال إلى مرحلة أكثر استقلالية.</p>
+          <a href="/register" class="btn btn-primary btn-sm">ابدأ الاختبار</a>
+        </article>
+
+        <article class="level-card reveal" data-group="5-6">
+          <div class="level-top">
+            <span class="level-badge">10 – 12 سنة</span>
+            <svg class="level-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 8 14v10c0 9 7 15 16 18 9-3 16-9 16-18V14L24 6Z"/><path d="m17 24 5 5 10-11"/></svg>
+          </div>
+          <h3>الصف الخامس والسادس</h3>
+          <p>أولى الخطوات في الكيمياء والفيزياء والفضاء، مع مفاهيم علمية متقدمة قليلاً وبأسلوب مبسّط.</p>
+          <a href="/register" class="btn btn-primary btn-sm">ابدأ الاختبار</a>
+        </article>
+
+        <article class="level-card reveal" data-group="7-8">
+          <div class="level-top">
+            <span class="level-badge">12 – 14 سنة</span>
+            <svg class="level-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6h12M20 6v10L10 34c-2 4 1 8 5 8h18c4 0 7-4 5-8L28 16V6"/><path d="M15 30h18"/></svg>
+          </div>
+          <h3>الصف السابع والثامن</h3>
+          <p>تخصصات علمية أوسع ومهارات تفكير تحليلي، بأسئلة تغطي عدة مواد لطلاب الصفين السابع والثامن.</p>
+          <a href="/register" class="btn btn-primary btn-sm">ابدأ الاختبار</a>
+        </article>
+
+        <article class="level-card reveal" data-group="9">
+          <div class="level-top">
+            <span class="level-badge">14 – 15 سنة</span>
+            <svg class="level-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 38V16M24 38V8M36 38V22"/><path d="M6 42h36"/></svg>
+          </div>
+          <h3>الصف التاسع</h3>
+          <p>استعداد منهجي متقدم في الكيمياء والفيزياء، وقياس دقيق لمستوى الإتقان قبل الانتقال للمرحلة الثانوية.</p>
+          <a href="/register" class="btn btn-primary btn-sm">ابدأ الاختبار</a>
+        </article>
+
+        <article class="level-card reveal" data-group="10">
+          <div class="level-top">
+            <span class="level-badge">15 – 17 سنة</span>
+            <svg class="level-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 4 15l20 9 20-9-20-9Z"/><path d="M12 20v11c0 3 5 6 12 6s12-3 12-6V20"/><path d="M44 15v12"/></svg>
+          </div>
+          <h3>الصف العاشر</h3>
+          <p>اختبارات بمستوى الثانوية العامة تغطي عدة مواد علمية وتُهيّك للالتحاق بالمرحلة الجامعية بثقة.</p>
+          <a href="/register" class="btn btn-primary btn-sm">ابدأ الاختبار</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= قسم بياني ================= -->
+  <section id="stats">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">الإحصائيات</span>
+        <h2>أرقام المنصة لحظة بلحظة</h2>
+        <p>توزيع الطلاب على المستويات وحالة الاختبارات المتاحة — محدَّث آلياً من قاعدة بيانات المنصة.</p>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card reveal">
+          <h3>توزيع الطلاب على المستويات</h3>
+          <p class="chart-sub">عدد الطلاب المسجّلين في كل مجموعة دراسية</p>
+          <div class="chart-wrap">
+            <canvas id="levelsChart"></canvas>
+            <div class="chart-empty" id="levelsChartEmpty">لا تتوفر بيانات كافية بعد — كن أول من ينضم!</div>
+          </div>
+        </div>
+
+        <div class="chart-card reveal">
+          <h3>توزيع الاختبارات</h3>
+          <p class="chart-sub">عدد الاختبارات المتاحة في كل مجموعة دراسية</p>
+          <div class="chart-wrap">
+            <canvas id="quizzesChart"></canvas>
+            <div class="chart-empty" id="quizzesChartEmpty">لا توجد اختبارات لعرضها حالياً.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= كيف تعمل المنصة ================= -->
+  <section id="how" style="background:#FFFFFF;">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">كيف تعمل المنصة</span>
+        <h2>ثلاث خطوات فقط تفصلك عن النتيجة</h2>
+        <p>من التسجيل إلى تحليل أدائك — رحلة بسيطة وسريعة.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card reveal">
+          <div class="step-num">١</div>
+          <h3>أنشئ حسابك مجاناً</h3>
+          <p>سجّل باسمك وبريدك واختر صفك الدراسي خلال أقل من دقيقة، بدون أي رسوم.</p>
+        </article>
+        <article class="step-card reveal">
+          <div class="step-num">٢</div>
+          <h3>اختر اختبارك وابدأ</h3>
+          <p>يصلك اختبار مخصّص لمجموعتك، أجب سؤالاً بعد سؤال مع شريط تقدّم يوضّح موقعك.</p>
+        </article>
+        <article class="step-card reveal">
+          <div class="step-num">٣</div>
+          <h3>راقب تقدّمك</h3>
+          <p>استلم نتيجتك فوراً، ثم تابع منحنى أدائك ونسبك في لوحة التحكم الخاصة بك.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= لماذا دستور + آراء ================= -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">لماذا دستور؟</span>
+        <h2>بناءٌ علمي… وتجربة مريحة</h2>
+        <p>الاسم يعني الاستناد والعلم؛ وهكذا نبني كل سؤال وكل رسالة في المنصة.</p>
+      </div>
+
+      <div class="why-grid">
+        <article class="why-card reveal">
+          <div class="why-emoji">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 13l9 5 9-5"/></svg>
+          </div>
+          <h3>قياس مستنِر</h3>
+          <p>أسئلة مرتّبة صعوبةً ومحاور، تُقيس الفهم الحقيقي لا الحفظ، مع نتائج قابلة للمقارنة عبر الزمن.</p>
+        </article>
+        <article class="why-card reveal">
+          <div class="why-emoji">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 14h5"/></svg>
+          </div>
+          <h3>واجهة عربية أولاً</h3>
+          <p>تصميم عربي كامل من اليمين لليسار بخط Tajawal، مريح للعين ويعمل بسلاسة على الجوال والحاسوب.</p>
+        </article>
+        <article class="why-card reveal">
+          <div class="why-emoji">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>خصوصية وأمان</h3>
+          <p>حسابك ونتائجك محفوظة في جلسة آمنة، ولا يطّلع عليها إلا أنت ومدير المنصة.</p>
+        </article>
+      </div>
+
+      <div class="quotes">
+        <article class="quote-card reveal">
+          <span class="qmark">”</span>
+          <p>النتائج الفورية غيّرت طريقة مراجعتي؛ أعرف ضعفي مباشرة وأعيده الاختبار حتى أتقنه.</p>
+          <div class="quote-who">
+            <span class="quote-avatar">ل</span>
+            <div><b>ليان عبدالله</b><span>طالبة — الصف السابع</span></div>
+          </div>
+        </article>
+        <article class="quote-card reveal">
+          <span class="qmark">”</span>
+          <p>الرسوم البيانية في لوحة التحكم تُظهر تقدّم ابني أسبوعاً بعد أسبوع، وهذا بالضبط ما كنت أبحث عنه.</p>
+          <div class="quote-who">
+            <span class="quote-avatar">م</span>
+            <div><b>محمد الحارثي</b><span>وليّ أمر</span></div>
+          </div>
+        </article>
+        <article class="quote-card reveal">
+          <span class="qmark">”</span>
+          <p>واجهة نظيفة وأسئلة محدّثة حسب المنهج — أستخدمها مع طلابي كاختبار قصير قبل كل وحدة.</p>
+          <div class="quote-who">
+            <span class="quote-avatar">س</span>
+            <div><b>سارة العمري</b><span>معلّمة علوم</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= تواصل معنا ================= -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">تواصل معنا</span>
+        <h2>لديك سؤال أو اقتراح؟</h2>
+        <p>اكتب لنا وسنردّ عليك في أقرب وقت — فريق دستور يقرأ كل رسالة.</p>
+      </div>
+
+      <div class="contact-grid">
+        <aside class="contact-info reveal">
+          <h3>نحن هنا لمساعدتك</h3>
+          <p> سواء كنت طالباً أو ولي أمر أو معلّماً، يسعدنا الاستماع إلى تجربتك وردّ على استفساراتك بسرعة.</p>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+              <div><b>البريد الإلكتروني</b><span>support@dastor.com</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <div><b>وقت الردّ</b><span>يومياً من ٩ صباحاً حتى ٦ مساءً</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.5A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+              <div><b>ردّ داخل المنصة</b><span>يصلك الردّ على بريدك ويُحفظ مع رسالتك</span></div>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="contact-form-card reveal">
+          <div class="alert" id="contactAlert" role="alert"></div>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">الاسم الكامل</label>
+                <input type="text" id="contactName" class="form-control" placeholder="اكتب اسمك" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">البريد الإلكتروني</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="name@example.com" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">رسالتك</label>
+              <textarea id="contactMessage" class="form-control" placeholder="اكتب سؤالك أو اقتراحك هنا..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="contactSubmit">إرسال الرسالة</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="/" class="logo on-dark">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><linearGradient id="lg2" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#4C6EF5"/><stop offset="1" stop-color="#3B5BDB"/></linearGradient></defs>
+              <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg2)"/>
+              <path d="M11 31.5c4.6-2.4 9.4-2.4 13 0v6.2c-3.6-2.4-8.4-2.4-13 0v-6.2Z" fill="#fff" opacity=".95"/>
+              <path d="M24 31.5c4.6-2.4 9.4-2.4 13 0v6.2c-3.6-2.4-8.4-2.4-13 0v-6.2Z" fill="#fff" opacity=".75"/>
+              <path d="M24 9.5 12.5 15.4 24 21.3l11.5-5.9L24 9.5Z" fill="#FFD98E"/>
+              <path d="M33 17.6v6.6c0 1.9-4 3.4-9 3.4s-9-1.5-9-3.4v-6.6" stroke="#FFD98E" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span class="logo-text">د<b>ستور</b></span>
+          </a>
+          <p>منصة تعليمية عربية تُقدّم اختبارات مُقنّنة ونتائج فورية وتحليلات دقيقة لطلاب الصفوف الأولى حتى العاشر.</p>
+        </div>
+
+        <div>
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#features">المميزات</a></li>
+            <li><a href="#levels">المستويات</a></li>
+            <li><a href="#stats">الإحصائيات</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>الحساب</h4>
+          <ul>
+            <li><a href="/login">تسجيل الدخول</a></li>
+            <li><a href="/register">إنشاء حساب</a></li>
+            <li><a href="/dashboard">لوحة الطالب</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>تواصل</h4>
+          <ul>
+            <li><a href="#contact">نموذج التواصل</a></li>
+            <li><a href="mailto:support@dastor.com">support@dastor.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        جميع الحقوق محفوظة © <span id="year">2026</span> منصة دستور — تعليم يُستند إليه.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

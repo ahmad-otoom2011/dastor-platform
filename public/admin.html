@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة الإدارة — منصة دستور</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="app-layout">
+
+    <!-- ================= Sidebar ================= -->
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="logo on-dark" aria-label="منصة دستور">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="lg1" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#4C6EF5"/><stop offset="1" stop-color="#3B5BDB"/></linearGradient></defs>
+          <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg1)"/>
+          <path d="M11 31.5c4.6-2.4 9.4-2.4 13 0v6.2c-3.6-2.4-8.4-2.4-13 0v-6.2Z" fill="#fff" opacity=".95"/>
+          <path d="M24 31.5c4.6-2.4 9.4-2.4 13 0v6.2c-3.6-2.4-8.4-2.4-13 0v-6.2Z" fill="#fff" opacity=".75"/>
+          <path d="M24 9.5 12.5 15.4 24 21.3l11.5-5.9L24 9.5Z" fill="#FFD98E"/>
+          <path d="M33 17.6v6.6c0 1.9-4 3.4-9 3.4s-9-1.5-9-3.4v-6.6" stroke="#FFD98E" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="logo-text">د<b>ستور</b></span>
+      </a>
+
+      <nav class="side-nav" id="sideNav">
+        <a href="#overview" class="active" data-panel="overview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/></svg>
+          نظرة عامة
+        </a>
+        <a href="#users" data-panel="users">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><path d="M17 4.5a4 4 0 0 1 0 7.5M22 21v-1a6 6 0 0 0-4-5.6"/></svg>
+          المستخدمون
+        </a>
+        <a href="#quizzes" data-panel="quizzes">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8.5 8.5h7M8.5 12.5h7M8.5 16.5h4"/></svg>
+          الاختبارات
+        </a>
+        <a href="#messages" data-panel="messages">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.5A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+          الرسائل
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <button class="logout-btn" id="logoutBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg>
+          تسجيل الخروج
+        </button>
+      </div>
+    </aside>
+    <div class="side-backdrop" id="sideBackdrop"></div>
+
+    <!-- ================= المحتوى ================= -->
+    <main class="main-content">
+      <div id="pageLoading" class="loading-box">
+        <div class="spinner"></div>
+        <p>جارٍ التحقق من الصلاحيات وتحميل لوحة الإدارة...</p>
+      </div>
+
+      <div id="pageContent" style="display:none;">
+        <header class="topbar">
+          <div>
+            <h1 id="pageTitle">نظرة عامة</h1>
+            <p class="sub" id="pageSub">ملخّص حالة المنصة لحظة بلحظة</p>
+          </div>
+          <div class="topbar-right">
+            <span class="grade-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V6l-8-3-8 3v6c0 6 8 10 8 10Z"/></svg>
+              مدير المنصة
+            </span>
+            <button class="side-toggle" id="sideToggle" aria-label="فتح القائمة">☰</button>
+          </div>
+        </header>
+
+        <!-- ============ نظرة عامة ============ -->
+        <section class="admin-panel active" id="panel-overview">
+          <div class="mini-stats">
+            <article class="mini-stat">
+              <span class="ms-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><path d="M17 4.5a4 4 0 0 1 0 7.5M22 21v-1a6 6 0 0 0-4-5.6"/></svg>
+              </span>
+              <div><div class="ms-value" id="ovStudents">—</div><div class="ms-label">الطلاب المسجّلون</div></div>
+            </article>
+            <article class="mini-stat">
+              <span class="ms-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8.5 8.5h7M8.5 12.5h7"/></svg>
+              </span>
+              <div><div class="ms-value" id="ovQuizzes">—</div><div class="ms-label">الاختبارات</div></div>
+            </article>
+            <article class="mini-stat">
+              <span class="ms-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>
+              </span>
+              <div><div class="ms-value" id="ovResults">—</div><div class="ms-label">النتائج المسجّلة</div></div>
+            </article>
+            <article class="mini-stat">
+              <span class="ms-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.5A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+              </span>
+              <div><div class="ms-value" id="ovMessages">—</div><div class="ms-label">الرسائل الواردة</div></div>
+            </article>
+          </div>
+
+          <div class="panel-charts">
+            <div class="chart-card">
+              <h3>المستخدمون حسب المستوى</h3>
+              <p class="chart-sub">توزيع الطلاب على المجموعات الدراسية</p>
+              <div class="chart-wrap">
+                <canvas id="ovUsersChart"></canvas>
+                <div class="chart-empty" id="ovUsersChartEmpty">لا توجد بيانات مستخدمين كافية بعد.</div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h3>حالة النتائج</h3>
+              <p class="chart-sub" id="ovResultsChartSub">توزيع الدرجات المسجّلة على مستويات الإتقان</p>
+              <div class="chart-wrap">
+                <canvas id="ovResultsChart"></canvas>
+                <div class="chart-empty" id="ovResultsChartEmpty">لا توجد نتائج مسجّلة بعد.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ المستخدمون ============ -->
+        <section class="admin-panel" id="panel-users">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>المستخدمون</h2>
+                <span class="hint">جميع حسابات المنصة — يمكنك حذف أي حساب</span>
+              </div>
+              <span class="chip" id="usersCount">0 مستخدم</span>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>الاسم</th>
+                    <th>البريد الإلكتروني</th>
+                    <th>الدور</th>
+                    <th>الصف</th>
+                    <th>تاريخ التسجيل</th>
+                    <th>إجراءات</th>
+                  </tr>
+                </thead>
+                <tbody id="usersBody">
+                  <tr><td colspan="7" class="table-empty">جارٍ التحميل...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ الاختبارات ============ -->
+        <section class="admin-panel" id="panel-quizzes">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2 id="quizFormTitle">إضافة اختبار جديد</h2>
+                <span class="hint">العنوان، المجموعة الدراسية، الوصف، والأسئلة</span>
+              </div>
+              <button class="btn btn-outline btn-sm" id="cancelEditBtn" hidden>إلغاء التعديل</button>
+            </div>
+
+            <div class="alert" id="quizFormAlert" role="alert"></div>
+
+            <form id="quizForm" class="quiz-form-grid" novalidate>
+              <input type="hidden" id="quizId" />
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="quizTitle">عنوان الاختبار</label>
+                  <input type="text" id="quizTitle" class="form-control" placeholder="مثال: اختبار الرياضيات — الوحدة الأولى" required />
+                </div>
+                <div class="form-group">
+                  <label for="quizGroup">المجموعة الدراسية</label>
+                  <select id="quizGroup" class="form-control" required>
+                    <option value="1-2">الصف الأول والثاني</option>
+                    <option value="3-4">الصف الثالث والرابع</option>
+                    <option value="5-6">الصف الخامس والسادس</option>
+                    <option value="7-8">الصف السابع والثامن</option>
+                    <option value="9">الصف التاسع</option>
+                    <option value="10">الصف العاشر</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="quizDesc">وصف الاختبار</label>
+                <textarea id="quizDesc" class="form-control" style="min-height:90px;" placeholder="وصف موجز يوضّح محتوى الاختبار وطلابه..." required></textarea>
+              </div>
+
+              <div>
+                <div class="panel-head" style="margin-bottom:12px;">
+                  <div>
+                    <b style="font-size:1rem;">الأسئلة</b>
+                    <span class="hint" id="questionsCount">لا توجد أسئلة بعد</span>
+                  </div>
+                  <button type="button" class="btn btn-outline btn-sm" id="addQuestionBtn">+ إضافة سؤال</button>
+                </div>
+                <div id="questionsWrap" class="quiz-form-grid"></div>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary" id="saveQuizBtn">حفظ الاختبار</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>قائمة الاختبارات</h2>
+                <span class="hint">اضغط تعديل لفتح الاختبار في النموذج أعلاه</span>
+              </div>
+            </div>
+            <div class="quiz-admin-list" id="adminQuizList">
+              <div class="loading-box"><div class="spinner"></div><p>جارٍ التحميل...</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ الرسائل ============ -->
+        <section class="admin-panel" id="panel-messages">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>رسائل التواصل</h2>
+                <span class="hint">استفسارات الزوار — أضف ردّك ليصلك لهم</span>
+              </div>
+              <span class="chip" id="messagesCount">0 رسالة</span>
+            </div>
+            <div id="messagesList">
+              <div class="loading-box"><div class="spinner"></div><p>جارٍ التحميل...</p></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

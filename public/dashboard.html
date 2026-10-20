@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة الطالب — منصة دستور</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="app-layout">
+
+    <!-- ================= Sidebar ================= -->
+    <aside class="sidebar" id="sidebar">
+      <a href="/" class="logo on-dark" aria-label="منصة دستور">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="lg1" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#4C6EF5"/><stop offset="1" stop-color="#3B5BDB"/></linearGradient></defs>
+          <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#lg1)"/>
+          <path d="M11 31.5c4.6-2.4 9.4-2.4 13 0v6.2c-3.6-2.4-8.4-2.4-13 0v-6.2Z" fill="#fff" opacity=".95"/>
+          <path d="M24 31.5c4.6-2.4 9.4-2.4 13 0v6.2c-3.6-2.4-8.4-2.4-13 0v-6.2Z" fill="#fff" opacity=".75"/>
+          <path d="M24 9.5 12.5 15.4 24 21.3l11.5-5.9L24 9.5Z" fill="#FFD98E"/>
+          <path d="M33 17.6v6.6c0 1.9-4 3.4-9 3.4s-9-1.5-9-3.4v-6.6" stroke="#FFD98E" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="logo-text">د<b>ستور</b></span>
+      </a>
+
+      <nav class="side-nav" id="sideNav">
+        <a href="#top" class="active" data-section="top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9Z"/><path d="M9 21v-7h6v7"/></svg>
+          الرئيسية
+        </a>
+        <a href="#quizzes" data-section="quizzes">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8.5 8.5h7M8.5 12.5h7M8.5 16.5h4"/></svg>
+          اختباراتي
+        </a>
+        <a href="#results" data-section="results">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>
+          نتائجي
+        </a>
+        <div class="side-divider"></div>
+        <a href="/#contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.5A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+          تواصل معنا
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <button class="logout-btn" id="logoutBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg>
+          تسجيل الخروج
+        </button>
+      </div>
+    </aside>
+    <div class="side-backdrop" id="sideBackdrop"></div>
+
+    <!-- ================= المحتوى ================= -->
+    <main class="main-content" id="top">
+      <div id="pageLoading" class="loading-box">
+        <div class="spinner"></div>
+        <p>جارٍ تحميل لوحتك التعليمية...</p>
+      </div>
+
+      <div id="pageContent" style="display:none;">
+        <!-- Header ترحيبي -->
+        <header class="topbar">
+          <div>
+            <h1 id="welcomeName">مرحباً بك</h1>
+            <p class="sub">تابع اختباراتك ونتائجك في مكان واحد — واصل التقدّم!</p>
+          </div>
+          <div class="topbar-right">
+            <span class="grade-badge" id="gradeBadge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+              <span id="gradeBadgeText">—</span>
+            </span>
+            <button class="side-toggle" id="sideToggle" aria-label="فتح القائمة">☰</button>
+          </div>
+        </header>
+
+        <!-- 4 بطاقات إحصائية -->
+        <section class="mini-stats" aria-label="إحصائياتي">
+          <article class="mini-stat">
+            <span class="ms-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8.5 8.5h7M8.5 12.5h7"/></svg>
+            </span>
+            <div>
+              <div class="ms-value" id="statTotal">—</div>
+              <div class="ms-label">إجمالي الاختبارات</div>
+            </div>
+          </article>
+          <article class="mini-stat">
+            <span class="ms-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </span>
+            <div>
+              <div class="ms-value" id="statAvg">—</div>
+              <div class="ms-label">المتوسط العام (٪)</div>
+            </div>
+          </article>
+          <article class="mini-stat">
+            <span class="ms-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M17 4h3v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V4h3"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/></svg>
+            </span>
+            <div>
+              <div class="ms-value" id="statBest">—</div>
+              <div class="ms-label">أفضل نتيجة (٪)</div>
+            </div>
+          </article>
+          <article class="mini-stat">
+            <span class="ms-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <div>
+              <div class="ms-value" id="statPass">—</div>
+              <div class="ms-label">نسبة النجاح (٪)</div>
+            </div>
+          </article>
+        </section>
+
+        <!-- الرسوم البيانية -->
+        <section class="panel-charts">
+          <div class="chart-card">
+            <h3>أداءي عبر الاختبارات</h3>
+            <p class="chart-sub">نسبة كل نتيجة من ١٠٠٪ بالترتيب الزمني</p>
+            <div class="chart-wrap">
+              <canvas id="perfChart"></canvas>
+              <div class="chart-empty" id="perfChartEmpty">ابدأ أول اختبار لتظهر هنا منحنى نتائجك.</div>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3>توزيع درجاتي</h3>
+            <p class="chart-sub">تصنيف نتائجك حسب مستوى الإتقان</p>
+            <div class="chart-wrap">
+              <canvas id="distChart"></canvas>
+              <div class="chart-empty" id="distChartEmpty">لا توجد نتائج كافية لعرض التوزيع.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- الاختبارات المتاحة -->
+        <section class="panel" id="quizzes">
+          <div class="panel-head">
+            <div>
+              <h2>الاختبارات المتاحة</h2>
+              <span class="hint">اختبارات مخصّصة لمجموعتك الدراسية</span>
+            </div>
+          </div>
+          <div class="quiz-list" id="quizList">
+            <div class="loading-box"><div class="spinner"></div><p>جارٍ تحميل الاختبارات...</p></div>
+          </div>
+        </section>
+
+        <!-- نتائجي -->
+        <section class="panel" id="results">
+          <div class="panel-head">
+            <div>
+              <h2>جدول نتائجي</h2>
+              <span class="hint">كل نتائجك السابقة مع التاريخ والنسبة</span>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>الاختبار</th>
+                  <th>الدرجة</th>
+                  <th>النسبة</th>
+                  <th>التاريخ</th>
+                </tr>
+              </thead>
+              <tbody id="resultsBody">
+                <tr><td colspan="5" class="table-empty">جارٍ التحميل...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
